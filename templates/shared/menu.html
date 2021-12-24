@@ -1,0 +1,43 @@
+{% load todo_tags %}
+<div class="menu">
+        <div class="main-menu">
+            <div class="scroll">
+                <ul class="list-unstyled">
+                    <li class="{% active_tag request  'Todo:todo_home' %}">
+                        <a href="{% url 'Todo:todo_home' %}" >
+                            <i class="iconsminds-notepad"></i>
+                            <span>لیست کار ها </span>
+                        </a>
+                    </li>
+                    <li  class="">
+                        <a href="#setting">
+                            <i class="iconsminds-wrench"></i> تنظیمات
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="sub-menu">
+            <div class="scroll">
+                <ul class="list-unstyled" data-link="setting" id="setting">
+                    <li>
+                        <a href="#" data-toggle="collapse" data-target="#collapseAuthorization" aria-expanded="true"
+                            aria-controls="collapseAuthorization" class="rotate-arrow-icon opacity-50">
+                            <i class="simple-icon-arrow-down"></i> <span class="d-inline-block">امنیتی</span>
+                        </a>
+                        <div id="collapseAuthorization" class="collapse show">
+                            <ul class="list-unstyled inner-level-menu">
+                                <li class="" >
+                                    <a href="">
+                                        <i class="iconsminds-finger-print"></i> <span
+                                            class="d-inline-block">رمزعبور</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+    </div>
