@@ -22,6 +22,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     # My Apps
     'Todo.apps.TodoConfig',
+    'Account.apps.AccountConfig',
     # Instaledd Apps
     'rest_framework'
 ]
