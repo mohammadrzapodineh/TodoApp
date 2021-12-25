@@ -35,6 +35,8 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    # My Middleware
+    'Account.middlewares.user_set_information_middleware'
 ]
 
 ROOT_URLCONF = 'TodoApp.urls'
@@ -113,3 +115,5 @@ MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'files')
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+# User Session's Name !
+USER_SESSION_ID = config('USER_SESSION_ID')

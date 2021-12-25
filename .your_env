@@ -1,2 +1,2 @@
-
 SECRET_KEY = "Insert Your Secret Key Here"
+USER_SESSION_ID = "Your Session Users Id "
