@@ -8,8 +8,6 @@ class UserSession:
         user = self.session.get(settings.USER_SESSION_ID)
         if not user:
             user_id = get_random_uniq_string()
-            if user_id in user.values():
-                user_id = get_random_uniq_string()
             user = self.session[settings.USER_SESSION_ID] = {'user_id': user_id}
         self.user = user
 

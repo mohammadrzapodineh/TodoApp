@@ -23,6 +23,7 @@ INSTALLED_APPS = [
     # My Apps
     'Todo.apps.TodoConfig',
     'Account.apps.AccountConfig',
+    'QrcodeCreator.apps.QrcodecreatorConfig',
     # Instaledd Apps
     'rest_framework'
 ]

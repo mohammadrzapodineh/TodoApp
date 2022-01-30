@@ -1,17 +1,13 @@
 from django.shortcuts import render
-from rest_framework.response import Response
-from rest_framework import status
-from .serializers import TodoSerializer
+from Account.User import UserSession
 from .models import Todo
-from rest_framework.decorators import api_view
 
 
-def test_view(request):
-    return render(request, 'Todo/todo.html')
-
-
-@api_view(['GET'])
-def get_todo(request):
-    query = Todo.objects.all()
-    serializer = TodoSerializer(query, many=True)
-    return Response(data=serializer.data, status=status.HTTP_200_OK)
+def todo_home(request):
+    session = UserSession(request)
+    user_session = session.get()
+    todos = Todo.objects.filter(user__user_uniq_key=user_session["user_id"])
+    context = {
+        'todos': todos
+    }
+    return render(request, 'Todo/todo.html', context)
