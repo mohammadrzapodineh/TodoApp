@@ -22,14 +22,22 @@
                                             <form>
                                                 <div class="form-group">
                                                     <label>عنوان</label>
-                                                    <input type="text" class="form-control" placeholder="">
                                                 </div>
+                                                   {{ todo_form.title }}
                                                 <div class="form-group">
                                                     <label>جزئیات</label>
-                                                    <textarea class="form-control" rows="2"></textarea>
+                                                    {{ todo_form.description }}
                                                 </div>
 
                                                 <div class="form-group">
+                                                    <label>جزئیات</label>
+                                                    {{ todo_form.do_date }}
+                                                </div>
+
+
+
+                                                {% comment %}
+                                                 <div class="form-group">
                                                     <label>مجموعه</label>
                                                     <select class="form-control select2-single select2-hidden-accessible" data-width="100%" tabindex="-1" aria-hidden="true">
                                                         <option label="&nbsp;">&nbsp;</option>
@@ -38,7 +46,6 @@
                                                         <option value="React">محصولات</option>
                                                     </select><span class="select2 select2-container select2-container--bootstrap" dir="rtl" style="width: 100%;"><span class="selection"><span class="select2-selection select2-selection--single form-control" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="0" aria-labelledby="select2-uhe1-container"><span class="select2-selection__rendered" id="select2-uhe1-container" title="&nbsp;">&nbsp;</span><span class="select2-selection__arrow" role="presentation"><b role="presentation"></b></span></span></span><span class="dropdown-wrapper" aria-hidden="true"></span></span>
                                                 </div>
-
                                                 <div class="form-group">
                                                     <label>برچسب ها</label>
                                                     <select class="form-control select2-multiple select2-hidden-accessible" multiple="" data-width="100%" tabindex="-1" aria-hidden="true">
@@ -47,13 +54,14 @@
                                                         <option value="Personal">خصوصی</option>
                                                     </select><span class="select2 select2-container select2-container--bootstrap" dir="rtl" style="width: 100%;"><span class="selection"><span class="select2-selection select2-selection--multiple form-control" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="-1"><ul class="select2-selection__rendered"><li class="select2-search select2-search--inline"><input class="select2-search__field" type="search" tabindex="0" autocomplete="off" autocorrect="off" autocapitalize="none" spellcheck="false" role="textbox" aria-autocomplete="list" placeholder="" style="width: 0.75em;"></li></ul></span></span><span class="dropdown-wrapper" aria-hidden="true"></span></span>
                                                 </div>
+                                                {% endcomment %}
 
 
                                                 <div class="form-group">
                                                     <label>وضعیت</label>
                                                     <div class="custom-control custom-checkbox">
-                                                        <input type="checkbox" class="custom-control-input" id="customCheck1">
-                                                        <label class="custom-control-label" for="customCheck1">تکمیل</label>
+                                                        {{ todo_form.is_do }}
+                                                        <label class="custom-control-label" for="custom-check1">انجام شده  </label>
                                                     </div>
                                                 </div>
                                             </form>
