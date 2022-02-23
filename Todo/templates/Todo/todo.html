@@ -19,7 +19,8 @@
                                         </div>
                                         <div class="modal-body">
 
-                                            <form>
+                                            <form method="post" action="{% url 'Todo:todo_home' %}">
+                                                {% csrf_token %}
                                                 <div class="form-group">
                                                     <label>عنوان</label>
                                                 </div>
@@ -64,12 +65,13 @@
                                                         <label class="custom-control-label" for="custom-check1">انجام شده  </label>
                                                     </div>
                                                 </div>
+                                                <div class="modal-footer">
+                                            <button type="button" class="btn btn-outline-primary" data-dismiss="modal">لغو</button>
+                                            <button type="submit" class="btn btn-primary">ارسال</button>
+                                        </div>
                                             </form>
                                         </div>
-                                        <div class="modal-footer">
-                                            <button type="button" class="btn btn-outline-primary" data-dismiss="modal">لغو</button>
-                                            <button type="button" class="btn btn-primary">ارسال</button>
-                                        </div>
+
                                     </div>
                                 </div>
                             </div>

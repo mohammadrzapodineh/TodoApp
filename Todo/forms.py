@@ -1,5 +1,4 @@
 from django import forms
-from datetime import datetime
 
 
 class CreateTodoForm(forms.Form):
@@ -13,5 +12,5 @@ class CreateTodoForm(forms.Form):
         attrs={'class': 'custom-control-input', 'type': 'checkbox', 'id': 'custom-check1'}
     ))
     do_date = forms.DateField(widget=forms.TextInput(
-        attrs={'type': 'date', 'value': '2022-2-10', 'min': '2022/01/01'}
+        attrs={'type': 'date'}
     ))
